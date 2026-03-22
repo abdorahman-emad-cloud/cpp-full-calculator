@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cmath>
+#include<iomanip>
 using namespace std;
 
 long double sum(float x, float y) {   //summation
@@ -65,17 +66,17 @@ int main() {
         case 1:
             cout << "Enter 2 numbers\n";
             cin >> x >> y;
-            cout << "the sum = " << sum(x, y) << endl;
+            cout << "the sum = " <<fixed<<setprecision(2)<< sum(x, y) << endl;
             break;
         case 2:
             cout << "Enter 2 numbers\n";
             cin >> x >> y;
-            cout << "the difference = " << diff(x, y) << endl;
+            cout << "the difference = " <<fixed<<setprecision(2)<< diff(x, y) << endl;
             break;
         case 3:
             cout << "Enter 2 numbers\n";
             cin >> x >> y;
-            cout << "the product = " << prod(x, y) << endl;
+            cout << "the product = " <<fixed<<setprecision(2)<< prod(x, y) << endl;
             break;
         case 4:
             do {
@@ -85,14 +86,14 @@ int main() {
                     cout << "invalid input\n" << "can not divid by zero\n";
                 }
             } while (y == 0);
-            cout << "the quotient = " << quot(x, y) << endl;
+            cout << "the quotient = "<<fixed<<setprecision(2) << quot(x, y) << endl;
             break;
         case 5:
             cout << "Enter the number\n";
             cin >> x;
             cout << "Enter the power\n";
             cin >> y;
-            cout << "the result = " << power(x, y) << endl;
+            cout << "the result = " <<fixed<<setprecision(2)<< power(x, y) << endl;
             break;
         case 6:
             do {
@@ -100,14 +101,18 @@ int main() {
                 cin >> x;
                 if (x < 0) { cout << "invalid input\n"; }
             } while (x < 0);
-            cout << "the result = " << squareRoot(x) << endl;
+            cout << "the result = " <<fixed<<setprecision(2)<< squareRoot(x) << endl;
             break;
         case 7:
             do {
-                cout << "Enter 2 integer numbers \n";
+                cout << "Enter 2 integer numbers (divisor cannot be 0)\n";
                 cin >> x >> y;
-                if (x - floor(x) != 0 || y - floor(y) != 0) { cout << "invalid input\n"; }
-            } while (x - floor(x) != 0 || y - floor(y) != 0);
+                
+                if (x - floor(x) != 0 || y - floor(y) != 0 || y == 0) { 
+                cout << "invalid input (ensure integers and no division by zero)\n"; 
+               }
+              } while (x - floor(x) != 0 || y - floor(y) != 0 || y == 0);
+    
             cout << "the reminder = " << reminder(static_cast<int>(x), static_cast<int>(y)) << endl;
             break;
         case 8:
