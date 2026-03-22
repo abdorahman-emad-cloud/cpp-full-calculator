@@ -26,4 +26,4 @@ You need a C++ compiler installed on your system (e.g., **GCC/G++**, **Clang**, 
 ### Steps
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/cpp-full-calculator.git](https://github.com/YOUR_USERNAME/cpp-full-calculator.git)
+   git clone [https://github.com/abdorahman-emad-cloud/cpp-full-calculator.git](https://github.com/abdorahman-emad-cloud/cpp-full-calculator.git)
